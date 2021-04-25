@@ -33,4 +33,3 @@ func _make_level():
 	final_chunk.make_final_chunk()
 	$LevelChunks.add_child(final_chunk)
 
-	

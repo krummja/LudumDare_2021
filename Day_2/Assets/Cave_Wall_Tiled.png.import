@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cave_Wall_3.png-8ef76dcaaf96f237b2d34662b1632808.stex"
+path="res://.import/Cave_Wall_Tiled.png-6dbfefbf7fd23703d4767644083646c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cave_Wall_3.png"
-dest_files=[ "res://.import/Cave_Wall_3.png-8ef76dcaaf96f237b2d34662b1632808.stex" ]
+source_file="res://Assets/Cave_Wall_Tiled.png"
+dest_files=[ "res://.import/Cave_Wall_Tiled.png-6dbfefbf7fd23703d4767644083646c9.stex" ]
 
 [params]
 

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Cave_Wall_3.png" type="Texture" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 69.1924, -3.59129, 51.7943, -4.57344, 27.3807, -15.6578, 13.3499, -9.2036, -1.94361, -10.747, 4.375, -5.375, -8.959, -2.60913, -13.25, 0.375, -16, 5.5, -13.75, 10.125, -7.125, 7.375, -4.125, 9.875, -6, 14.375, -4.75, 18.25, -10.375, 17.875, -13.875, 21.75, -10.875, 28.875, -14.75, 34.375, -12.125, 40.875, -7.625, 41.25, -5.75, 43.5, -14.875, 50.75, -13.25, 55.5, -5.125, 56.875, -6.01254, 61.5115, -14.2907, 63.0549, -16.1147, 66.8432, -14, 68.25, -9.09931, 70.2106, -12.25, 74.25, -11.625, 78.625, -1.52269, 78.3484, -7.5, 83.375, 14.875, 83.875, 10.125, 79.875, 23, 80.125, 24.9955, 82.8383, 32.75, 85.25, 41.625, 86.375, 52.0749, 79.7515, 57.875, 81.875, 66.625, 83.125, 72.75, 85.75, 85.5, 76.375, 71.297, 76.3841, 71.8583, 74.2795, 88.625, 67.25, 83.375, 60.75, 87.25, 55.375, 76.375, 47.375, 87.0115, 44.6746, 85.8891, 35.8352, 87.25, 26.75, 77, 18.25, 85.875, 15, 86.25, 7, 79.7155, 2.44195, 84.065, -1.06575, 77.19, -9.06329, 71.8583, -8.78267 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 70, 78.5031 )
+
+[node name="CaveWall3" type="KinematicBody2D"]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.5, 0 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -20, -20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 35, 32 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 2 )

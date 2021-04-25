@@ -10,7 +10,6 @@ var depth_state = Depth.DEPTH_1
 func _process(_delta):
 	var player_position = player.position
 	var player_sprite = player.get_node("Sprite")
-	var player_light = player.get_node("Light2D")
 	var player_camera = player.get_node("Camera2D")
 	var background = $World/ParallaxBackground
 	

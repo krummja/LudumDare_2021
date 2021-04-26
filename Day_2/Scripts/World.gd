@@ -19,6 +19,13 @@ func _ready():
 	RNG.randomize()
 	_make_level()
 
+var entity_list = []
+
+func _process(_delta: float) -> void:
+	entity_list.append('<entity>')
+	for entity in entity_list:
+		print(entity)
+
 func _make_level():
 	var starting_chunk = LevelChunk.instance()
 	starting_chunk.make_starting_chunk()
@@ -40,10 +47,6 @@ func _make_level():
 	var final_chunk = LevelChunk.instance()
 	final_chunk.make_final_chunk()
 	$LevelChunks.add_child(final_chunk)
-
-	#Story Chunks
-
-	
 	offset += 500
 
 func _add_story(chunkNum):

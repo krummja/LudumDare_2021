@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/menuscript.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Audio/underwaterbell.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Assets/MenuGraphicalElements/MenuBackground.png" type="Texture" id=3]
+[ext_resource path="res://Assets/MenuGraphicalElements/PlayButton.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Audio/Ocean Man.mp3" type="AudioStream" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 511.671, 299.686 )
+scale = Vector2( 0.635545, 0.66525 )
+z_index = -10
+texture = ExtResource( 3 )
+
+[node name="TitleText" type="Label" parent="CanvasLayer"]
+margin_left = 445.192
+margin_top = 82.6398
+margin_right = 782.192
+margin_bottom = 184.64
+size_flags_stretch_ratio = 0.0
+text = "B E L L    D I V E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="CanvasLayer"]
+margin_left = 422.0
+margin_top = 168.0
+margin_right = 586.0
+margin_bottom = 217.0
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/PlayButton"]
+position = Vector2( 82.1331, 24.6838 )
+scale = Vector2( 0.106064, 0.0913393 )
+texture = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Credits" type="Label" parent="CanvasLayer"]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 1022.0
+margin_bottom = 43.0
+text = "Pat 'Cirtapk'	 | Jonathan 'Krummja' | Leanne 'KinArt' | Lucy Ralston | Logan 'Leginar' | Ethan 'Jaffy'"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlay" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 74.4881
+margin_top = 300.488
+margin_right = 287.488
+margin_bottom = 425.488
+text = "Controls
+Move ---- W,A,S,D
+Attack --- Spacebar
+
+Descend to find answers.
+
+Beware that which waits for you in the depths."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musicButton" type="Button" parent="CanvasLayer"]
+margin_left = 10.0
+margin_top = 575.0
+margin_right = 30.0
+margin_bottom = 595.0
+text = ";)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="oceanMan" type="AudioStreamPlayer" parent="CanvasLayer/musicButton"]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="finished" from="CanvasLayer/AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="pressed" from="CanvasLayer/musicButton" to="." method="_on_musicButton_pressed"]

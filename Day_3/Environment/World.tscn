@@ -24,15 +24,7 @@ centered = true
 offset = Vector2( 23.5157, -8.83119 )
 
 [node name="Foreground" type="Sprite" parent="."]
-visible = false
 modulate = Color( 0.329412, 0.329412, 0.329412, 0.286275 )
 position = Vector2( 0, 12670 )
 scale = Vector2( 8, 100 )
 texture = ExtResource( 4 )
-
-[node name="Cave" parent="." instance=ExtResource( 3 )]
-modulate = Color( 0.313726, 0.313726, 0.313726, 1 )
-position = Vector2( 3863.45, 2091.35 )
-scale = Vector2( 30, 30 )
-centered = true
-offset = Vector2( 23.5157, -8.83119 )

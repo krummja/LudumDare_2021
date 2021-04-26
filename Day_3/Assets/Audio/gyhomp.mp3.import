@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gyhomp.mp3-e63d7a24c11e2f9d35d2e6190f5180eb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/gyhomp.mp3"
+dest_files=[ "res://.import/gyhomp.mp3-e63d7a24c11e2f9d35d2e6190f5180eb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

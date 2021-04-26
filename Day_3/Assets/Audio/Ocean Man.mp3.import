@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ocean Man.mp3-cf385f2fa64c55b02058464db005a4af.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Ocean Man.mp3"
+dest_files=[ "res://.import/Ocean Man.mp3-cf385f2fa64c55b02058464db005a4af.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

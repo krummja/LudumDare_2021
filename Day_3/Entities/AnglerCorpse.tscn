@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Fish/Enemy Swim 3.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 38.6082
+
+[node name="KinematicBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.482353, 0.45098, 0.45098, 1 )
+self_modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+rotation = -3.14131
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )

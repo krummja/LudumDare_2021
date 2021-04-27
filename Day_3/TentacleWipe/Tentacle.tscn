@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://TentacleWipe/Tentacle4.png" type="Texture" id=1]
+[ext_resource path="res://TentacleWipe/Tentacle1.png" type="Texture" id=2]
+[ext_resource path="res://TentacleWipe/Tentacle2.png" type="Texture" id=3]
+[ext_resource path="res://TentacleWipe/Tentacle3.png" type="Texture" id=4]
+[ext_resource path="res://TentacleWipe/black.png" type="Texture" id=5]
+[ext_resource path="res://TentacleWipe/Tentacle.gd" type="Script" id=6]
+
+[sub_resource type="AnimatedTexture" id=1]
+flags = 4
+frames = 6
+fps = 7.8
+frame_0/texture = ExtResource( 2 )
+frame_1/texture = ExtResource( 3 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 4 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 1 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 4 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 3 )
+frame_5/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=2]
+flags = 4
+frames = 6
+frame_0/texture = ExtResource( 4 )
+frame_1/texture = ExtResource( 1 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 4 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 3 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 2 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 3 )
+frame_5/delay_sec = 0.0
+
+[node name="Tentacle" type="Node2D"]
+position = Vector2( -12.7136, 241.558 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -373.286, 605.464 )
+z_index = 4
+texture = SubResource( 1 )
+offset = Vector2( -12.5008, -93.4838 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -369.51, 605.238 )
+scale = Vector2( 1, 1.55092 )
+z_index = 4
+texture = SubResource( 2 )
+offset = Vector2( 186.019, -92.7373 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 23.0466, 607.741 )
+z_index = 4
+texture = SubResource( 1 )
+offset = Vector2( -12.5008, -93.4838 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 23.0466, 605.279 )
+scale = Vector2( 1, 1.33903 )
+z_index = 4
+texture = SubResource( 2 )
+offset = Vector2( 186.019, -92.7373 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 398.618, 610.374 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+z_index = 4
+texture = SubResource( 1 )
+offset = Vector2( -12.5008, -93.4838 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 409.61, 616.731 )
+z_index = 4
+texture = SubResource( 2 )
+offset = Vector2( 186.019, -92.7373 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 756.716, 612.493 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+z_index = 4
+texture = SubResource( 1 )
+offset = Vector2( -12.5008, -93.4838 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 1121.22, 621.191 )
+rotation = -3.14159
+scale = Vector2( 0.92063, -1.33378 )
+z_index = 4
+texture = SubResource( 2 )
+offset = Vector2( 186.019, -92.7373 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 288.374, 980.936 )
+scale = Vector2( 15.2336, 7.49386 )
+z_index = 4
+texture = ExtResource( 5 )

@@ -38,7 +38,7 @@ func _make_level():
 		offset += 500
 		
 		var spawn_chance = RNG.randi_range(0, 100)
-		if spawn_chance < 25:
+		if spawn_chance < 45:
 			_spawn_fishy(offset)
 		
 		_add_story(_i+1)
@@ -48,10 +48,9 @@ func _make_level():
 		$StoryChunks.add_child(story)
 	
 	offset += 500
-	var final_chunk = LevelChunk.instance()
+	var final_chunk = LevelChunk.instance()	
 	final_chunk.make_final_chunk()
 	$LevelChunks.add_child(final_chunk)
-	
 	
 func _spawn_fishy(_offset):
 	var new_fishy = Angler.instance()

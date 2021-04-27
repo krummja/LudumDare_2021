@@ -3,11 +3,13 @@ extends Node2D
 onready var player = get_node("Entities/Player")
 onready var darkness = get_node("Darkness")
 onready var tween = get_node("Tween")
+onready var END = get_node("END/Tentacle")
 
 enum Depth {DEPTH_1, DEPTH_2, DEPTH_3, DEPTH_4, DEPTH_5}
 var depth_state = Depth.DEPTH_1
 
 func _process(_delta):
+
 	var player_position = player.position
 	var player_sprite = player.get_node("Sprite")
 	var player_attack_sprite = player.get_node("Attack")
@@ -115,3 +117,7 @@ func _process(_delta):
 	if player_position.y > 18500:
 		player_camera.limit_left = -1000
 		player_camera.limit_right = 1000
+		
+	if player_position.y > 19200:
+		END.wiping = true
+		

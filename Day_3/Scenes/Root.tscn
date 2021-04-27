@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Entities/BigBloodSplat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Environment/StoryOverlay.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/PlayerAttackZone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Entities/Health_Bar2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TentacleWipe/Tentacle.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Environment/World.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Entities/BloodSplat.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/Root.gd" type="Script" id=9]
@@ -12,6 +13,7 @@
 [ext_resource path="res://Assets/Audio/MuffledScream.wav" type="AudioStream" id=11]
 
 [node name="Root" type="Node2D"]
+pause_mode = 1
 script = ExtResource( 9 )
 
 [node name="Tween" type="Tween" parent="."]
@@ -67,6 +69,40 @@ stream = ExtResource( 11 )
 stream = ExtResource( 10 )
 volume_db = -9.088
 autoplay = true
+
+[node name="END" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="Tentacle" parent="END" instance=ExtResource( 6 )]
+
+[node name="end" type="Node2D" parent="END"]
+z_index = 5
+
+[node name="end" type="RichTextLabel" parent="END/end"]
+visible = false
+anchor_top = -0.00374156
+anchor_bottom = -0.00374156
+margin_left = 209.858
+margin_top = 171.537
+margin_right = 1433.86
+margin_bottom = 943.537
+text = "Clench your sweating hand as the churning silt you mistook for natural movement congeals into--
+
+
+			She is--  
+						a goddess, or a monster, or a demon, or the ocean, the ocean, the ocean
+
+
+			She Remembers-- 
+						your limbless bodies, writhing in these waters when human was another word for worm.
+
+
+			She is Hungrier Than You.
+
+											The water makes you feel surrounded."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="UpdateBar" from="Entities/Player" to="CanvasLayer/Health Bar" method="_on_Player_UpdateBar"]
 [connection signal="finished" from="CanvasLayer/Health Bar/DeathSound" to="CanvasLayer/Health Bar" method="_on_DeathSound_finished"]

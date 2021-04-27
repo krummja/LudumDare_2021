@@ -23,12 +23,16 @@ z_index = -10
 texture = ExtResource( 3 )
 
 [node name="TitleText" type="Label" parent="CanvasLayer"]
-margin_left = 445.192
-margin_top = 82.6398
-margin_right = 782.192
-margin_bottom = 184.64
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -168.5
+margin_top = 88.0
+margin_right = 168.5
+margin_bottom = 190.0
 size_flags_stretch_ratio = 0.0
 text = "B E L L    D I V E"
+align = 1
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -14,6 +14,7 @@ var velocity = Vector2.ZERO
 var zap_offset = -55
 var invincible = 0.0 #invicibility countdown after getting hit
 signal UpdateBar #update healthbar
+onready var root = get_owner()
 
 func _ready():
 	emit_signal("UpdateBar",health)
@@ -44,6 +45,7 @@ func get_input():
 			attack()
 		if Input.is_action_pressed("to_end"):
 			position = Vector2(0, 18500)
+			
 
 func _physics_process(delta):
 	get_input()
